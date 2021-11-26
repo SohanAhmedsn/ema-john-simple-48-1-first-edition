@@ -13,11 +13,20 @@ const Cart = (props) => {
 
     const tortalReducer = (previous, product) =>previous + product.price;
     const total = cart.reduce(tortalReducer, 0);
+    const shipping = 15;
+    const tax = (total + shipping) * 10;
+    const grandTotal = total + shipping + tax;
+
      return (
         <div>
               <h3>Order Summary</h3>
+                <ul>
                 <h4>Items Ordered: {props.cart.length} </h4>
                 <p>Total: {total}</p>
+                <p>Shipping: {shipping} </p>
+                <p>Tax: {tax.toFixed(2)} </p>
+                <p>Grand Total:{grandTotal.toFixed(2)} </p>
+                </ul>
         </div>
     );
 };
