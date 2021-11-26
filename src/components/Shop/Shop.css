@@ -11,3 +11,13 @@
 /* .cart-container{
 
 } */
+
+.search-container{
+    background-color: black;
+    line-height: 20px;
+    
+}
+.search-container input{
+    width: 70%;
+
+}
